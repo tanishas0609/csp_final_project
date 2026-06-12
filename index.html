@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="calc.html">Calculation Page</a>
+      <a href="gallery.html">Media Vault</a>
+    </nav>
+
+    <h1>Welcome to My Portfolio</h1>
+    <p>This is a small web app I made for class. Use the nav bar above to check out the calculator page and the gallery page.</p>
+
+    <h2>Personalize Dashboard Theme</h2>
+
+    <button onclick="changeToBlue()">Neon Blue</button>
+    <button onclick="changeToGreen()">Emerald Cyber</button>
+    <button onclick="resetTheme()">Reset Theme</button>
+
+  </div>
+
+  <script>
+    function changeToBlue() {
+      document.body.style.backgroundColor = "#0c4a6e";
+    }
+
+    function changeToGreen() {
+      document.body.style.backgroundColor = "#064e3b";
+    }
+
+    function resetTheme() {
+      document.body.style.backgroundColor = "#0f172a";
+    }
+  </script>
+
+</body>
+</html>
