@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculation Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="calc.html">Calculation Page</a>
+      <a href="gallery.html">Media Vault</a>
+    </nav>
+
+    <h1>Tip Calculator</h1>
+    <p>Type in your bill amount and the tip percent you want to leave, then press the buttons to see the results.</p>
+
+    <label for="bill">Enter (your bill amount)</label>
+    <input type="number" id="bill" placeholder="example: 45.50">
+    <button onclick="calculateTip()">Calculate Tip</button>
+
+    <label for="tip">Enter (your tip percent)</label>
+    <input type="number" id="tip" placeholder="example: 15">
+    <button onclick="calculateTotal()">Calculate Total</button>
+
+    <div class="result-box" id="output">Your results will show up here.</div>
+
+  </div>
+
+  <script>
+    function calculateTip() {
+      var bill = Number(document.getElementById("bill").value);
+      var tip = Number(document.getElementById("tip").value);
+
+      var tipAmount = bill * (tip / 100);
+
+      document.getElementById("output").textContent = "Tip amount: $" + tipAmount.toFixed(2);
+    }
+
+    function calculateTotal() {
+      var bill = Number(document.getElementById("bill").value);
+      var tip = Number(document.getElementById("tip").value);
+
+      var tipAmount = bill * (tip / 100);
+      var total = bill + tipAmount;
+
+      document.getElementById("output").textContent = "Total with tip: $" + total.toFixed(2);
+    }
+  </script>
+
+</body>
+</html>
